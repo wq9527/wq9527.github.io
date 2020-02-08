@@ -2,18 +2,148 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>首页</title>
-    <link rel="stylesheet" href="./css/index.css">
+    <title>es6</title>
 </head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #content {
+        text-align: center;
+    }
+
+    .heart {
+        font-size: 30px;
+        width: 1em;
+        height: 1em;
+        color: red;
+        background-color: currentColor;
+        border-radius: 50%;
+
+        /* box-shadow: -3.3em -3.3em, -2.2em -3.3em, 2.2em -3.3em, 3.3em -3.3em,
+            -4.4em -2.2em, -3.3em -2.2em, -2.2em -2.2em, -1.1em -2.2em,
+            1.1em -2.2em, 2.2em -2.2em, 3.3em -2.2em, 4.4em -2.2em,
+            -5.5em -1.1em, -4.4em -1.1em, -3.3em -1.1em, -2.2em -1.1em, -1.1em -1.1em,
+            0em -1.1em,
+            1.1em -1.1em, 2.2em -1.1em, 3.3em -1.1em, 4.4em -1.1em, 5.5em -1.1em,
+            -4.4em 0em, -3.3em 0em, -2.2em 0em, -1.1em 0em,
+            1.1em 0em, 2.2em 0em, 3.3em 0em, 4.4em 0em,
+            -3.3em 1.1em, -2.2em 1.1em, -1.1em 1.1em,
+            0em 1.1em,
+            1.1em 1.1em, 2.2em 1.1em, 3.3em 1.1em,
+            -2.2em 2.2em, -1.1em 2.2em,
+            0em 2.2em,
+            1.1em 2.2em, 2.2em 2.2em,
+            -1.1em 3.3em,
+            0em 3.3em,
+            1.1em 3.3em,
+            0em 4.4em; */
+        animation: heart 1s infinite alternate;
+    }
+
+    @keyframes heart {
+        to {
+            box-shadow: -3.3em -3.3em, -2.2em -3.3em, 2.2em -3.3em, 3.3em -3.3em,
+                -4.4em -2.2em, -3.3em -2.2em, -2.2em -2.2em, -1.1em -2.2em,
+                1.1em -2.2em, 2.2em -2.2em, 3.3em -2.2em, 4.4em -2.2em,
+                -5.5em -1.1em, -4.4em -1.1em, -3.3em -1.1em, -2.2em -1.1em, -1.1em -1.1em,
+                0em -1.1em,
+                1.1em -1.1em, 2.2em -1.1em, 3.3em -1.1em, 4.4em -1.1em, 5.5em -1.1em,
+                -4.4em 0em, -3.3em 0em, -2.2em 0em, -1.1em 0em,
+                1.1em 0em, 2.2em 0em, 3.3em 0em, 4.4em 0em,
+                -3.3em 1.1em, -2.2em 1.1em, -1.1em 1.1em,
+                0em 1.1em,
+                1.1em 1.1em, 2.2em 1.1em, 3.3em 1.1em,
+                -2.2em 2.2em, -1.1em 2.2em,
+                0em 2.2em,
+                1.1em 2.2em, 2.2em 2.2em,
+                -1.1em 3.3em,
+                0em 3.3em,
+                1.1em 3.3em,
+                0em 4.4em;
+            color: hsla(0, 100% 50%, 0.6);
+        }
+    }
+</style>
 
 <body>
-    <h1>hello world</h1>
-    <h2>陈建辉傻逼</h2>
-    <p id="data"></p>
+    <div style="width:100px;margin: 100px auto;">
+
+        <div class='heart'></div>
+    </div>
+    <p id='content'></p>
 </body>
-<script src="./js/index.js"></script>
+<script>
+    // let time, hours = -1;
+    // let refresh = setInterval(() => {
+    //     document.getElementsByClassName('sel')[0].click();
+    //     time = new Date();
+    //     hours = time.getHours();
+    //     if (hours == 15) {
+    //         clearInterval(refresh)
+    //         let btn = document.getElementsByClassName('btn72')[0];
+    //         btn.click()
+    //     }
+    // }, 1000);
+    // let nodeList = document.querySelectorAll('div');
+    // let node_list = document.getElementsByTagName('div');
+    const content = document.getElementById('content');
+    let showText = '';
+    const text = `我劝你早点归去
+    你说你不想归去
+    只叫我抱着你
+    悠悠海风轻轻吹
+    冷却了野火堆
+    我看见伤心的你
+    你说我怎舍得去
+    哭态也绝美
+    如何止哭
+    只得轻吻你发边
+    让风继续吹
+    不忍远离
+    心里极渴望
+    希望留下伴着你
+    风继续吹
+    不忍远离
+    心里亦有泪不愿流泪望着你
+    过去多少快乐记忆
+    何妨与你一起去追
+    要将忧郁苦痛洗去
+    柔情蜜意我愿记取
+    要强忍离情泪
+    未许它向下垂
+    愁如锁
+    眉头聚
+    别离泪始终要下垂
+    我已令你快乐
+    你也令我痴痴醉
+    你已在我心
+    不必再问记着谁
+    留住眼内每滴泪
+    为何仍断续流默默垂
+    为何仍断续流默默垂
+    为何仍断续流默默垂`;
+    // content.innerText = '<i>hello</i>';
+    let setTime;
+    let count = 0;
+    function timeShowText(params) {
+        // for (const item of text) {
+
+        // }
+        setTime = setInterval(() => {
+            showText += text.charAt(count);
+            content.innerHTML = showText;
+            count++;
+        }, 300);
+    }
+    timeShowText()
+    clearInterval(setTime)
+</script>
 
 </html>
